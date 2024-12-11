@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #FFD700, #FF8C00, #FF4500);
+    color: #4E342E;
+}
+
+.planner {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(255, 239, 213, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #FF8C00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: rgba(255, 165, 0, 0.7);
+    border-radius: 8px;
+}
+
+.header-row input {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #FF4500;
+}
+
+.header-row label {
+    font-weight: bold;
+    color: #4E342E;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+aside {
+    flex: 1;
+    background: rgba(255, 239, 213, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+aside h2 {
+    font-size: 1.5em;
+    color: #FF4500;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+aside input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #FF8C00;
+}
+
+main {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.day {
+    background: rgba(255, 239, 213, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.day h3 {
+    margin: 0 0 10px;
+    color: #FF4500;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #FF8C00;
+    border-radius: 4px;
+    padding: 10px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #FF4500;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+}

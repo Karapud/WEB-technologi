@@ -1,0 +1,132 @@
+/* Основний стиль */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #8B4513, #D2691E, #FF4500); /* Осінній градієнт */
+    color: #4E342E; /* Темно-коричневий для тексту */
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Заголовок */
+header {
+    background-color: rgba(139, 69, 19, 0.9); /* Темно-коричневий */
+    color: #FFD700; /* Золотистий текст */
+    text-align: center;
+    padding: 80px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Меню навігації */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(165, 42, 42, 0.9); /* Темно-червоний */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #FFD700; /* Золотистий */
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    font-size: 1.3em;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FF6347; /* Помаранчевий при наведенні */
+    border-radius: 12px;
+    color: #4E342E; /* Темно-коричневий текст */
+    transform: scale(1.1);
+}
+
+/* Секція практичних робіт */
+section {
+    background-color: rgba(255, 239, 213, 0.9); /* Напівпрозорий бежевий */
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 900px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-30px);
+    transition: all 0.4s ease-in-out;
+    backdrop-filter: blur(10px);
+}
+
+section:hover {
+    transform: translateY(0);
+}
+
+section h2 {
+    font-size: 2.8em;
+    color: #8B4513; /* Глибокий коричневий */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section p {
+    font-size: 1.4em;
+    color: #4E342E; /* Темний текст */
+    line-height: 1.6;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: rgba(165, 42, 42, 0.9); /* Темно-червоний */
+    color: #FFD700; /* Золотистий */
+    margin-top: 60px;
+}
+
+footer p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+footer a {
+    color: #FF6347; /* Помаранчевий */
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFD700; /* Золотистий */
+    text-decoration: underline;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 2s ease-in-out;
+}

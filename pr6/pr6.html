@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Clicker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #FF7F50, #FFD700, #FF4500);
+            overflow: hidden;
+        }
+
+        .clicker {
+            position: relative;
+            text-align: center;
+        }
+
+        .clicker img {
+            width: 200px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .clicker img:hover {
+            transform: scale(1.1);
+        }
+
+        .score {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #4E342E;
+        }
+    </style>
+</head>
+<body>
+    <div class="clicker">
+        <img id="pokemon" src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif" alt="Pokemon">
+        <div class="score">Clicks: <span id="score">0</span></div>
+    </div>
+
+    <script>
+        const pokemonImages = [
+            "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif",
+            "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif",
+            "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif",
+            "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif"
+        ];
+
+        let currentPokemon = 0;
+        let score = 0;
+
+        const pokemonElement = document.getElementById('pokemon');
+        const scoreElement = document.getElementById('score');
+
+        pokemonElement.addEventListener('click', () => {
+            score++;
+            scoreElement.textContent = score;
+            currentPokemon = (currentPokemon + 1) % pokemonImages.length;
+            pokemonElement.src = pokemonImages[currentPokemon];
+        });
+    </script>
+</body>
+</html>
